@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ScaleIoT - Smart Parking Solutions for Seamless Parking. Experience fully automated parking with license plate recognition, smart spot allocation, and automatic payments.">
+    <meta name="keywords" content="smart parking, digital parking, parking management, IoT parking, automated parking, license plate recognition">
+    <title>ScaleIoT – Smart Parking Solutions for Seamless Parking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-parking"></i>
+                <span>ScaleIoT</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn-primary nav-cta">Join Beta</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Seamless Smart Parking with <span class="highlight">ScaleIoT</span>
+                </h1>
+                <p class="hero-subtitle">
+                    ScaleIoT: Parking Made Effortless. Drive in, park, and go – no tickets, no hassle.
+                </p>
+                <p class="hero-description">
+                    Experience a fully automated parking system that recognizes your car, guides you to an optimal spot, and charges you automatically – for a truly seamless visit.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-large" onclick="openBetaForm()">
+                        <i class="fas fa-rocket"></i>
+                        Join Beta Waitlist
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="openContactForm()">
+                        <i class="fas fa-building"></i>
+                        Contact Us (For Organizations)
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">35%</span>
+                        <span class="stat-label">Customer Retention Increase</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Minutes Search Time</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="parking-animation">
+                    <div class="car">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="gate">
+                        <div class="gate-arm"></div>
+                    </div>
+                    <div class="parking-spot">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Overview -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why ScaleIoT?</h2>
+                <p>Traditional parking problems meet innovative IoT solutions</p>
+            </div>
+            <div class="problem-solution-content">
+                <div class="problem">
+                    <h3>The Parking Problem</h3>
+                    <p>Circling around to find a spot, long lines at entry/exit, missed tickets, and parking fines – traditional parking is a headache for drivers and a challenge for businesses.</p>
+                    <div class="problem-icons">
+                        <div class="problem-icon">
+                            <i class="fas fa-clock"></i>
+                            <span>Time Wasted</span>
+                        </div>
+                        <div class="problem-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span>Lost Tickets</span>
+                        </div>
+                        <div class="problem-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Frustration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution">
+                    <h3>The ScaleIoT Solution</h3>
+                    <p>ScaleIoT leverages IoT sensors and license plate recognition to automate parking. From the moment you arrive, the system takes over – no ticket needed. It finds you a spot and even processes payment on exit.</p>
+                    <div class="solution-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automated Entry & Exit</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Smart Spot Allocation</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automatic Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Your journey to seamless parking in 5 simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Download & Register</h3>
+                    <p>Sign up on the ScaleIoT mobile app and register your vehicle license plate.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Arrive & Enter</h3>
+                    <p>Camera automatically recognizes your license plate and opens the gate instantly.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Smart Spot Assignment</h3>
+                    <p>System assigns the optimal parking spot based on your preferences and real-time occupancy.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Navigation to Spot</h3>
+                    <p>Get turn-by-turn directions to your spot via the app or guided signage.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Seamless Exit & Payment</h3>
+                    <p>Drive out - gate opens automatically and payment is charged to your account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features & Benefits</h2>
+                <p>Innovative technology that transforms parking experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Automatic License Plate Recognition</h3>
+                    <p>Camera sensors detect your vehicle and grant instant entry – no ticket or button press required.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> Faster entry, no lost tickets
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Smart Parking Spot Assignment</h3>
+                    <p>Our AI/IoT engine allocates the best available spot for you in real time.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> Optimized parking without cruising around
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Real-Time Navigation</h3>
+                    <p>Turn-by-turn directions to your spot via the mobile app or guided signage.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> No more circling aisles – save time and fuel
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Automatic Payment Processing</h3>
+                    <p>Integrated payment system charges your saved account on exit.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> No queues at pay stations, seamless exit
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>User Preferences & Loyalty</h3>
+                    <p>Set parking preferences and earn loyalty rewards for using the system.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> Personalized experience and incentives
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data & Analytics Dashboard</h3>
+                    <p>Live dashboard for parking managers to see occupancy, peak times, and more.</p>
+                    <div class="feature-benefit">
+                        <strong>Benefit:</strong> Improved decision-making and operational efficiency
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Drivers -->
+    <section class="benefits-drivers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Drivers Love ScaleIoT</h2>
+                <p>Designed to take the stress out of parking for everyday drivers</p>
+            </div>
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Save Time, Park Faster</h3>
+                            <p>Drivers spend an average of several minutes just searching for parking in busy areas – time you could spend shopping or working. ScaleIoT virtually eliminates search time by reserving a spot as soon as you arrive.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>No More Stress & Frustration</h3>
+                            <p>No more scrambling for a ticket or worrying about losing it. A seamless entry and exit means a stress-free start and end to your trip.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Convenient & Cashless</h3>
+                            <p>Payment is automatic and digital – no need to carry cash or stand in line at a pay machine. Receipts are sent to your app/email for transparency.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Personalized Experience</h3>
+                            <p>Set your parking preferences (e.g., "near Exit A" or "covered parking"). ScaleIoT remembers and tailors the experience for you each time.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Safe & Secure</h3>
+                            <p>Enhanced security with monitored entry/exit and well-managed lots. The system records each vehicle entry, which can improve safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual">
+                    <div class="driver-illustration">
+                        <i class="fas fa-user-tie"></i>
+                        <div class="happy-face">😊</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Organizations -->
+    <section class="benefits-organizations" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits for Your Organization</h2>
+                <p>Smart Parking, Smart Business</p>
+            </div>
+            <div class="org-benefits-grid">
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Increase Customer Satisfaction & Loyalty</h3>
+                    <p>When parking is easy, customers are happier from the moment they arrive. This positive experience makes them more likely to stay longer and return.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">35%</span>
+                        <span class="metric-label">Customer Retention Increase</span>
+                    </div>
+                </div>
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Boost Footfall and Revenue</h3>
+                    <p>By reducing the barrier to visit (no parking hassle), more people choose your venue over others. Shoppers who have a smooth experience will visit more frequently.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">+</span>
+                        <span class="metric-label">Higher Customer Spending</span>
+                    </div>
+                </div>
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Optimized Parking Utilization</h3>
+                    <p>ScaleIoT's system guides cars to underused areas and turns over spots faster, meaning your parking capacity is used more efficiently.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">↑</span>
+                        <span class="metric-label">Better Space Usage</span>
+                    </div>
+                </div>
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Reduce Operational Costs</h3>
+                    <p>Automation reduces the need for manual staff at gates and the costs associated with paper tickets and machine maintenance.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">↓</span>
+                        <span class="metric-label">Lower OPEX</span>
+                    </div>
+                </div>
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Improved Revenue Tracking & New Monetization</h3>
+                    <p>Digital payments and usage data allow for accurate tracking of parking revenue and enable new monetization models like premium reserved spots.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">💰</span>
+                        <span class="metric-label">New Revenue Streams</span>
+                    </div>
+                </div>
+                <div class="org-benefit-card">
+                    <div class="org-benefit-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Insights & Management</h3>
+                    <p>Access to rich data (occupancy rates, peak hours, average parking duration, repeat visitors) helps in decision making and operational planning.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-number">📊</span>
+                        <span class="metric-label">Actionable Insights</span>
+                    </div>
+                </div>
+            </div>
+            <div class="org-benefits-summary">
+                <p><strong>According to industry research, when parking is convenient, customers show a higher propensity to spend and are less likely to choose a different mall.</strong></p>
+                <p>In short, ScaleIoT turns parking from a pain point into a competitive advantage for your organization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What People Are Saying</h2>
+                <p>Real feedback from our beta users and partners</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"ScaleIoT made parking at my office so much easier – I just drive in and my spot is ready. It really saves me time every morning."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Beta Tester</h4>
+                            <span>Office Worker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Since integrating ScaleIoT, our parking operations are smoother than ever. Customer complaints about parking have virtually disappeared."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Partner Organization</h4>
+                            <span>Facility Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Get Started with ScaleIoT</h2>
+                <p>Ready to transform your parking experience? Join the future of smart parking today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openBetaForm()">
+                        <i class="fas fa-rocket"></i>
+                        Join the Beta Waitlist
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="openContactForm()">
+                        <i class="fas fa-building"></i>
+                        Contact Us for a Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-parking"></i>
+                        <span>ScaleIoT</span>
+                    </div>
+                    <p>Innovating Smart Cities with IoT-powered parking solutions that make urban mobility seamless and efficient.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Started</h3>
+                    <ul>
+                        <li><a href="#" onclick="openBetaForm()">Join Beta</a></li>
+                        <li><a href="#" onclick="openContactForm()">Request Demo</a></li>
+                        <li><a href="#contact">Contact Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@scaleiot.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Smart City District</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScaleIoT. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Beta Signup Modal -->
+    <div class="modal" id="betaModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBetaForm()">&times;</span>
+            <h2>Join the Beta Waitlist</h2>
+            <p>Be among the first to experience seamless smart parking!</p>
+            <form id="betaForm" class="form">
+                <div class="form-group">
+                    <label for="betaName">Full Name</label>
+                    <input type="text" id="betaName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="betaEmail">Email Address</label>
+                    <input type="email" id="betaEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="betaPhone">Phone Number (Optional)</label>
+                    <input type="tel" id="betaPhone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="betaVehicle">Vehicle Type</label>
+                    <select id="betaVehicle" name="vehicle">
+                        <option value="">Select vehicle type</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="truck">Truck</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Join Beta Waitlist</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <h2>Contact Us for More Information</h2>
+            <p>Interested in bringing smart parking to your facility? Let's discuss how ScaleIoT can help.</p>
+            <form id="contactForm" class="form">
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactCompany">Company/Organization</label>
+                    <input type="text" id="contactCompany" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactType">Facility Type</label>
+                    <select id="contactType" name="facilityType">
+                        <option value="">Select facility type</option>
+                        <option value="mall">Shopping Mall</option>
+                        <option value="office">Office Building</option>
+                        <option value="hospital">Hospital</option>
+                        <option value="airport">Airport</option>
+                        <option value="university">University</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your parking needs and how we can help..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank You!</h3>
+            <p id="successText">Your message has been sent successfully.</p>
+            <button class="btn btn-primary" onclick="closeSuccessMessage()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
