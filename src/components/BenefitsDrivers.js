@@ -6,9 +6,7 @@ import {
   CreditCard, 
   Heart,
   Shield,
-  MapPin,
-  Star,
-  Zap
+  MapPin
 } from 'lucide-react';
 
 const BenefitsDrivers = () => {
@@ -16,6 +14,7 @@ const BenefitsDrivers = () => {
   const [isVisible, setIsVisible] = React.useState({ 'driver-benefits': false });
 
   useEffect(() => {
+    const currentRef = benefitsRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,13 +26,13 @@ const BenefitsDrivers = () => {
       { threshold: 0.1 }
     );
 
-    if (benefitsRef.current) {
-      observer.observe(benefitsRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (benefitsRef.current) {
-        observer.unobserve(benefitsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

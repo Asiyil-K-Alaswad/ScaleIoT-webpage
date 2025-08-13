@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
-  Users, 
   DollarSign, 
   BarChart3,
   Target,
-  Zap,
   Building2,
   Heart,
   Gauge
@@ -17,6 +15,7 @@ const BenefitsOrganizations = () => {
   const [isVisible, setIsVisible] = React.useState({ 'business-benefits': false });
 
   useEffect(() => {
+    const currentRef = benefitsRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,13 +27,13 @@ const BenefitsOrganizations = () => {
       { threshold: 0.1 }
     );
 
-    if (benefitsRef.current) {
-      observer.observe(benefitsRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (benefitsRef.current) {
-        observer.unobserve(benefitsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -96,15 +95,7 @@ const BenefitsOrganizations = () => {
     }
   ];
 
-  const caseStudy = {
-    title: "UAE Mall Case Study",
-    results: [
-      { value: "35%", label: "Customer Retention Increase" },
-      { value: "47%", label: "Reduced Search Time" },
-      { value: "23%", label: "Revenue Growth" },
-      { value: "90%", label: "Customer Satisfaction" }
-    ]
-  };
+
 
   return (
     <section id="business-benefits" className="benefits-organizations" ref={benefitsRef}>

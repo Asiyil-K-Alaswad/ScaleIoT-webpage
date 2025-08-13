@@ -35,8 +35,8 @@ const Footer = ({ openBetaForm, openContactForm }) => {
           <div className="footer-section">
             <h3>Get Started</h3>
             <ul>
-              <li><a href="#" onClick={openBetaForm}>Join Beta</a></li>
-              <li><a href="#" onClick={openContactForm}>Request Demo</a></li>
+              <li><button onClick={openBetaForm} className="footer-link-btn">Join Beta</button></li>
+              <li><button onClick={openContactForm} className="footer-link-btn">Request Demo</button></li>
             </ul>
           </div>
           <div className="footer-section">
@@ -49,9 +49,9 @@ const Footer = ({ openBetaForm, openContactForm }) => {
         <div className="footer-bottom">
           <p>&copy; 2025 ScaleIoT. All rights reserved.</p>
           <div className="social-links">
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-facebook"></i></a>
+            <button className="social-link-btn"><i className="fab fa-linkedin"></i></button>
+            <button className="social-link-btn"><i className="fab fa-twitter"></i></button>
+            <button className="social-link-btn"><i className="fab fa-facebook"></i></button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
   "name": "scaleiot-landing-page",
   "version": "1.0.0",
   "description": "ScaleIoT - Smart Parking Solutions Landing Page",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

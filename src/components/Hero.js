@@ -1,12 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { Stage, Layer, Line, Rect, Group } from 'react-konva';
 
 const Hero = ({ openBetaForm, openContactForm }) => {
   const heroRef = useRef(null);
-  const stageRef = useRef(null);
   const animationRef = useRef(null);
   const [parkingSpots, setParkingSpots] = useState([]);
-  const [paths, setPaths] = useState([]);
   const [currentPath, setCurrentPath] = useState([]);
   const [animationProgress, setAnimationProgress] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -17,40 +14,10 @@ const Hero = ({ openBetaForm, openContactForm }) => {
   const LOT_HEIGHT = 18;
   const SPOT_WIDTH = 2;
   const SPOT_HEIGHT = 1.5;
-  const ROAD_WIDTH = 1.5;
-
-  // Colors
-  const NEON_ORANGE = '#FE662E';
 
   // Generate parking lot grid for hero
   useEffect(() => {
     const spots = [];
-    const lotPaths = [];
-
-    // Create main entrance road
-    const entranceRoad = [];
-    for (let i = 0; i < LOT_WIDTH; i++) {
-      entranceRoad.push({ x: i * GRID_SIZE, y: 0 });
-    }
-    lotPaths.push(entranceRoad);
-
-    // Create horizontal roads
-    for (let row = 2; row < LOT_HEIGHT - 2; row += 3) {
-      const road = [];
-      for (let i = 0; i < LOT_WIDTH; i++) {
-        road.push({ x: i * GRID_SIZE, y: row * GRID_SIZE });
-      }
-      lotPaths.push(road);
-    }
-
-    // Create vertical roads
-    for (let col = 2; col < LOT_WIDTH - 2; col += 4) {
-      const road = [];
-      for (let i = 0; i < LOT_HEIGHT; i++) {
-        road.push({ x: col * GRID_SIZE, y: i * GRID_SIZE });
-      }
-      lotPaths.push(road);
-    }
 
     // Generate parking spots
     for (let row = 1; row < LOT_HEIGHT - 1; row++) {
@@ -75,7 +42,6 @@ const Hero = ({ openBetaForm, openContactForm }) => {
     }
 
     setParkingSpots(spots);
-    setPaths(lotPaths);
   }, []);
 
   // Simple pathfinding for hero animation
@@ -163,45 +129,6 @@ const Hero = ({ openBetaForm, openContactForm }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Calculate current path segment for animation
-  const getCurrentPathSegment = () => {
-    if (currentPath.length < 2) return [];
-    
-    const progress = animationProgress;
-    const totalLength = currentPath.length - 1;
-    const currentIndex = Math.floor(progress * totalLength);
-    const segmentProgress = (progress * totalLength) % 1;
-    
-    const segment = currentPath.slice(0, currentIndex + 1);
-    
-    if (segmentProgress > 0 && currentIndex < totalLength) {
-      const current = currentPath[currentIndex];
-      const next = currentPath[currentIndex + 1];
-      const interpolated = {
-        x: current.x + (next.x - current.x) * segmentProgress,
-        y: current.y + (next.y - current.y) * segmentProgress
-      };
-      segment.push(interpolated);
-    }
-    
-    return segment;
-  };
-
-  // Calculate zoom and position based on scroll
-  const getScrollEffects = () => {
-    const baseZoom = 1.2; // Start zoomed in
-    const zoomRange = 0.3; // Additional zoom range
-    const zoom = baseZoom + (scrollProgress * zoomRange);
-    
-    // Calculate movement based on scroll
-    const moveX = scrollProgress * 50; // Move right as user scrolls
-    const moveY = scrollProgress * -30; // Move up slightly as user scrolls
-    
-    return { zoom, moveX, moveY };
-  };
-
-  const { zoom, moveX, moveY } = getScrollEffects();
 
   return (
     <section className="hero" ref={heroRef}>
