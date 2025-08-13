@@ -25,13 +25,14 @@ const BenefitsDrivers = () => {
       { threshold: 0.1 }
     );
 
-    if (benefitsRef.current) {
-      observer.observe(benefitsRef.current);
+    const currentRef = benefitsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (benefitsRef.current) {
-        observer.unobserve(benefitsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
