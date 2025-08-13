@@ -117,7 +117,7 @@ const BenefitsOrganizations = () => {
           >
             <div className="badge">
               <Building2 className="badge-icon" />
-              <span>Smart Business Benefits</span>
+              <span>    Smart Business Benefits</span>
             </div>
             <h2>
               Transform Parking into a <span className="highlight">Competitive Advantage</span>

@@ -147,8 +147,10 @@ p {
     color: var(--primary-color);
 }
 
-.nav-logo i {
-    font-size: 2rem;
+.nav-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -246,6 +248,7 @@ p {
     gap: 1rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-stats {
@@ -1203,9 +1206,10 @@ p {
 
 .benefit-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    min-height: 64px;
 }
 
 .benefit-icon-bg {
@@ -1261,6 +1265,11 @@ p {
     font-size: 0.875rem;
     font-weight: 600;
     background: #f0fdf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    min-width: fit-content;
 }
 
 .benefit-card h3 {
@@ -1464,6 +1473,7 @@ p {
 }
 
 .author-info span {
+    margin-left: 10px;
     color: var(--text-light);
     font-size: 0.9rem;
 }
@@ -1544,6 +1554,12 @@ p {
     margin-bottom: 1rem;
 }
 
+.footer-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .footer-section h3 {
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -1569,6 +1585,20 @@ p {
 
 .footer-section ul li i {
     margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.footer-section ul li .email-text {
+    color: var(--gray-300);
+}
+
+.footer-section ul li a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
     color: var(--primary-color);
 }
 

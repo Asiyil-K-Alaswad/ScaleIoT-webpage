@@ -37,7 +37,7 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <i className="fas fa-parking"></i>
+          <img src="/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
           <span>ScaleIoT</span>
         </div>
         

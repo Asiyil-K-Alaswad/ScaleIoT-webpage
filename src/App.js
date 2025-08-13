@@ -97,6 +97,7 @@ function App() {
       <NeonVectorBackground 
         scrollProgress={scrollProgress}
         isVisible={true}
+        concurrentPaths={6}
       />
       <Navbar 
         openBetaForm={openBetaForm}

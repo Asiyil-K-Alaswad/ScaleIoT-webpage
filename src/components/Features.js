@@ -114,7 +114,7 @@ const Features = () => {
               Powerful Features, <span className="highlight">Simple Experience</span>
             </h2>
             <p>
-              Cutting-edge IoT technology and AI combine to create the smartest parking solution available
+              Cutting-edge IoT technology and AI combine to create a smarter parking experience
             </p>
           </motion.div>
         </div>

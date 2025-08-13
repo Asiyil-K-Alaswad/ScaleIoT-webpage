@@ -18,7 +18,7 @@ const Footer = ({ openBetaForm, openContactForm }) => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <i className="fas fa-parking"></i>
+              <img src="/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
               <span>ScaleIoT</span>
             </div>
             <p>Innovating Smart Cities with IoT-powered parking solutions that make urban mobility seamless and efficient.</p>
@@ -42,7 +42,7 @@ const Footer = ({ openBetaForm, openContactForm }) => {
           <div className="footer-section">
             <h3>Contact Info</h3>
             <ul>
-              <li><i className="fas fa-envelope"></i> contact@scaleiot.org</li>
+              <li><i className="fas fa-envelope"></i> <span className="email-text">contact@scaleiot.org</span></li>
             </ul>
           </div>
         </div>
