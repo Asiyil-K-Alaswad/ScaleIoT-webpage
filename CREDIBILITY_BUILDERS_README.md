@@ -44,16 +44,18 @@ export const teamMembers = [
 ```
 
 ### 2. Add Team Photos
-Create a `/public/team/` directory and add team member photos:
+Add team member photos directly to the `/public/` directory:
 - **Recommended size**: 600x600px minimum
 - **Format**: JPG, PNG, or WebP
-- **Naming**: Use consistent naming (e.g., `ahmed.jpg`, `omar.jpg`)
+- **Naming**: Use consistent naming (e.g., `Picture1.png`, `Picture2.png`)
+- **Path format**: Use absolute paths starting with `/` (e.g., `/Picture1.png`)
 
 ### 3. Add Association Logos
-Create a `/public/logos/` directory and add:
-- **UHUB logo** (SVG preferred, or high-res PNG)
-- **UDST logo** (SVG preferred, or high-res PNG)
-- **File naming**: `uhub.svg`, `udst.svg`
+Add association logos directly to the `/public/` directory:
+- **UHUB logo** (WebP/PNG format)
+- **UDST logo** (PNG format)
+- **File naming**: `uhub.webp`, `uni.png`
+- **Path format**: Use absolute paths starting with `/` (e.g., `/uhub.webp`)
 
 ### 4. Verify LinkedIn URLs
 - Test all LinkedIn profile links

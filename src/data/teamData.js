@@ -7,7 +7,7 @@ export const teamMembers = [
     name: "Waqas Behzad",
     role: "Business Strategy specialist ",
     linkedinUrl: "https://www.linkedin.com/in/waqas-behzad-83b927216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
-    photoUrl: "/Picture1.png", // Replace with actual photo path or set to null if no photo
+    photoUrl: "/Picture1.png", // Production-safe absolute path
     showPhoto: true, // Set to false if no photo should be displayed
     expertiseTags: ["Business Strategy", "Tech", "Management"],
   },
@@ -16,7 +16,7 @@ export const teamMembers = [
     name: "Asiyil Khalid",
     role: "Systems Engineer",
     linkedinUrl: "https://www.linkedin.com/in/asiyil-alaswad-811842348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
-    photoUrl: "/Picture2.png", // No photo - will show initials avatar
+    photoUrl: "/Picture2.png", // Production-safe absolute path
     showPhoto: true, // Important: set to false for members without photos
     expertiseTags: ["IoT Systems", "App Development", "Network Architecture"],
   }
@@ -28,13 +28,13 @@ export const associations = [
   {
     name: "UHUB",
     siteUrl: "https://uhub.ae", // Replace with actual website URL
-    logoSvg: "/uhub.webp", // Replace with actual logo path (SVG preferred)
+    logoSvg: "/uhub.webp", // Production-safe absolute path
     alt: "UHUB Innovation Hub logo" // Accessible alt text
   },
   {
     name: "UDST",
     siteUrl: "https://udst.edu.qa", // Replace with actual website URL
-    logoSvg: "/uni.png", // Replace with actual logo path (SVG preferred)
+    logoSvg: "/uni.png", // Production-safe absolute path
     alt: "University of Doha for Science and Technology logo" // Accessible alt text
   }
   // Add more associations as needed
