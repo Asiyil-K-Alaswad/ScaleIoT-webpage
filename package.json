@@ -1,66 +1,43 @@
 {
   "name": "scaleiot-landing-page",
   "version": "1.0.0",
-  "description": "A modern, responsive landing page for ScaleIoT - an innovative IoT-powered smart parking solution",
-  "main": "index.html",
+  "description": "ScaleIoT - Smart Parking Solutions Landing Page",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^12.23.12",
+    "konva": "^9.2.3",
+    "lucide-react": "^0.539.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-konva": "^18.2.10",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000",
-    "serve": "python -m http.server 8000",
-    "build": "echo 'No build process needed for static site'",
-    "deploy": "echo 'Deploy to your preferred hosting service'",
-    "test": "echo 'Open index.html in browser to test'",
-    "lint:html": "echo 'Consider using htmlhint for HTML validation'",
-    "lint:css": "echo 'Consider using stylelint for CSS validation'",
-    "lint:js": "echo 'Consider using eslint for JavaScript validation'",
-    "optimize": "echo 'Consider using tools like imagemin, cssnano, and terser for production optimization'"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [
-    "landing-page",
-    "smart-parking",
-    "iot",
-    "parking-solution",
-    "responsive-design",
-    "modern-web",
-    "css-grid",
-    "vanilla-javascript"
-  ],
-  "author": "ScaleIoT Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-org/scaleiot-landing-page.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/your-org/scaleiot-landing-page/issues"
-  },
-  "homepage": "https://scaleiot.com",
-  "devDependencies": {},
-  "dependencies": {},
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ],
-  "features": {
-    "responsive": true,
-    "accessibility": true,
-    "seo": true,
-    "performance": true,
-    "mobile-first": true,
-    "modern-css": true,
-    "vanilla-js": true
-  },
-  "performance": {
-    "lighthouse": {
-      "performance": "90+",
-      "accessibility": "95+",
-      "best-practices": "90+",
-      "seo": "90+"
-    }
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
