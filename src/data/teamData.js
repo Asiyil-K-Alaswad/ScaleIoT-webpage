@@ -5,7 +5,7 @@ export const teamMembers = [
   {
     id: 1,
     name: "Waqas Behzad",
-    role: "Business Strategy specialist ",
+    role: "Chief Executive Officer",
     linkedinUrl: "https://www.linkedin.com/in/waqas-behzad-83b927216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
     photoUrl: "./ScaleIoT-webpage/Picture1.png", // Will be mapped to imported image
     showPhoto: true, // Set to false if no photo should be displayed
@@ -14,7 +14,7 @@ export const teamMembers = [
   {
     id: 2,
     name: "Asiyil Khalid",
-    role: "Systems Engineer",
+    role: "Chief Technology Officer",
     linkedinUrl: "https://www.linkedin.com/in/asiyil-alaswad-811842348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
     photoUrl: "./ScaleIoT-webpage/Picture2.png", // Will be mapped to imported image
     showPhoto: true, // Important: set to false for members without photos

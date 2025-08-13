@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
@@ -95,7 +96,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ position: 'relative', zIndex: 1 }}>
+    <ThemeProvider>
+      <div className="App" style={{ position: 'relative', zIndex: 1 }}>
       <NeonVectorBackground 
         scrollProgress={scrollProgress}
         isVisible={true}
@@ -113,11 +115,11 @@ function App() {
       
       <ProblemSolution />
       <HowItWorks />
+      <MissionVision />
       <Features />
       <BenefitsDrivers />
       <BenefitsOrganizations />
       
-      <MissionVision />
       
       <CredibilityBuilders />
       
@@ -148,7 +150,8 @@ function App() {
         onClose={closeSuccessMessage}
         text={successText}
       />
-    </div>
+          </div>
+    </ThemeProvider>
   );
 }
 

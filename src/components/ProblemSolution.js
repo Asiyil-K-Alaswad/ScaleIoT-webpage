@@ -47,13 +47,13 @@ const ProblemSolution = () => {
                 <div className="benefit-icon-bg">
                   <i className="fas fa-check-circle"></i>
                 </div>
-                <span>Automated Entry & Exit</span>
+                <span>Smart Spot Allocation</span>
               </div>
               <div className="benefit">
                 <div className="benefit-icon-bg">
                   <i className="fas fa-check-circle"></i>
                 </div>
-                <span>Smart Spot Allocation</span>
+                <span>In-App Parking Guidance</span>
               </div>
               <div className="benefit">
                 <div className="benefit-icon-bg">

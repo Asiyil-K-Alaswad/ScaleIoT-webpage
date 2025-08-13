@@ -1,16 +1,19 @@
 {
   "files": {
     "main.css": "/ScaleIoT-webpage/static/css/main.951fef06.css",
-    "main.js": "/ScaleIoT-webpage/static/js/main.db129ae3.js",
+    "main.js": "/ScaleIoT-webpage/static/js/main.7326282b.js",
     "static/js/453.7b9d84c1.chunk.js": "/ScaleIoT-webpage/static/js/453.7b9d84c1.chunk.js",
+    "static/media/Picture2.png": "/ScaleIoT-webpage/static/media/Picture2.13f99ef1b67fb5d12a31.png",
+    "static/media/Picture1.png": "/ScaleIoT-webpage/static/media/Picture1.d81c8dd58433c07f3d00.png",
+    "static/media/uhub.webp": "/ScaleIoT-webpage/static/media/uhub.7b44345ac2f035c58cd1.webp",
     "static/media/logo.png": "/ScaleIoT-webpage/static/media/logo.92f35b8746372350df0c.png",
     "index.html": "/ScaleIoT-webpage/index.html",
     "main.951fef06.css.map": "/ScaleIoT-webpage/static/css/main.951fef06.css.map",
-    "main.db129ae3.js.map": "/ScaleIoT-webpage/static/js/main.db129ae3.js.map",
+    "main.7326282b.js.map": "/ScaleIoT-webpage/static/js/main.7326282b.js.map",
     "453.7b9d84c1.chunk.js.map": "/ScaleIoT-webpage/static/js/453.7b9d84c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.951fef06.css",
-    "static/js/main.db129ae3.js"
+    "static/js/main.7326282b.js"
   ]
 }

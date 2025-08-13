@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from './assets/logo.png';
+import logo from '../assets/logo.png';
+import ThemeToggle from './ThemeToggle';
 
 
 const Navbar = ({ openBetaForm, openContactForm }) => {
@@ -72,6 +73,7 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
           >
             Contact
           </a>
+          <ThemeToggle />
           <button className="btn btn-primary nav-cta" onClick={openBetaForm}>
             Join Beta
           </button>
