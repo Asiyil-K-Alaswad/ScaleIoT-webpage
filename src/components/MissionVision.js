@@ -51,7 +51,7 @@ const MissionVision = () => {
             </div>
             <div className="card-content">
               <p className="mission-text">
-              ScaleIoT removes parking friction and boosts site performance. We digitize the journey—license-plate entry, congestion-aware guidance, and cashless exit—so drivers save time and organizations gain footfall, satisfaction, utilization, and efficiency. Built for usability, privacy, peak resilience, and loyalty.
+              ScaleIoT removes parking friction and boosts site performance. We digitize entry, guidance, and payment, so drivers save time and organizations gain footfall, satisfaction, utilization, and efficiency. Built for usability, privacy, peak resilience, and loyalty.
               </p>
               
             </div>
