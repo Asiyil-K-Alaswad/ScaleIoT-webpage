@@ -37,8 +37,8 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <img src="/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
-          <span>ScaleIoT</span>
+          <img src="./ScaleIoT-webpage/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
+          <span>ScaleIoT-test</span>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
