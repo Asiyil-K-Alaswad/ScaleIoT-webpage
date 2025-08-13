@@ -88,22 +88,7 @@ const BetaModal = ({ isOpen, onClose, onSuccess }) => {
               onChange={handleChange}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="betaVehicle">Vehicle Type</label>
-            <select
-              id="betaVehicle"
-              name="vehicle"
-              value={formData.vehicle}
-              onChange={handleChange}
-            >
-              <option value="">Select vehicle type</option>
-              <option value="sedan">Sedan</option>
-              <option value="suv">SUV</option>
-              <option value="truck">Truck</option>
-              <option value="motorcycle">Motorcycle</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+
           <button 
             type="submit" 
             className="btn btn-primary btn-full"
