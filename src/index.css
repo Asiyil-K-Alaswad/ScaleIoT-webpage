@@ -382,7 +382,7 @@ p {
 /* Problem & Solution Section */
 .problem-solution {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-200) 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     position: relative;
     z-index: 1;
 }
@@ -403,12 +403,15 @@ p {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    color: var(--text-primary);
 }
 
 .problem {
-    background: linear-gradient(135deg, #2d1b1b 0%, #1a0f0f 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(220, 38, 38, 0.1) 100%);
     border-left: 6px solid #DC2626;
     border-bottom: 4px solid #DC2626;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(220, 38, 38, 0.2);
 }
 
 .problem:hover {
@@ -417,9 +420,11 @@ p {
 }
 
 .solution {
-    background: linear-gradient(135deg, #1a1a2d 0%, #0f0f1a 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(254, 102, 46, 0.1) 100%);
     border-left: 6px solid var(--primary-color);
     border-bottom: 4px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(254, 102, 46, 0.2);
 }
 
 .solution:hover {
@@ -434,9 +439,13 @@ p {
     margin-bottom: 1.5rem;
 }
 
+.problem-header h3, .solution-header h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
 .solution-header h3 {
     color: var(--primary-color);
-    font-weight: 700;
 }
 
 .problem-alert-icon {
@@ -484,6 +493,7 @@ p {
 .problem-icon {
     background: rgba(220, 38, 38, 0.05);
     border: 1px solid rgba(220, 38, 38, 0.1);
+    color: var(--text-primary);
 }
 
 .problem-icon:hover {
@@ -494,6 +504,7 @@ p {
 .benefit {
     background: rgba(254, 102, 46, 0.05);
     border: 1px solid rgba(254, 102, 46, 0.1);
+    color: var(--text-primary);
 }
 
 .benefit:hover {
@@ -546,7 +557,7 @@ p {
     left: 0;
     right: 0;
     height: 3px;
-    background: #404040;
+    background: var(--border-color);
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 2px;
