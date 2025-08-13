@@ -107,15 +107,7 @@ const CredibilityBuilders = () => {
                 <p className="member-role">
                   {member.role}
                 </p>
-                
-                {/* Expertise Tags */}
-                <div className="expertise-tags">
-                  {member.expertiseTags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="expertise-tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              
 
                 {/* Bio (collapsible on mobile) */}
                 {member.bio && (

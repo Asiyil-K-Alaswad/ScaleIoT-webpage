@@ -59,21 +59,6 @@ const MissionVision = () => {
                 usability, privacy, and peak-hour resilience, and we reward loyalty to retain satisfied users.
               </p>
               
-              {/* Outcome Pillars */}
-              <div className="outcome-pillars">
-                <div className="pillar-chip">
-                  <span>Time Well Spent</span>
-                </div>
-                <div className="pillar-chip">
-                  <span>Smarter Operations</span>
-                </div>
-                <div className="pillar-chip">
-                  <span>Happier Tenants & Shoppers</span>
-                </div>
-                <div className="pillar-chip">
-                  <span>Trust by Design</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -86,27 +71,12 @@ const MissionVision = () => {
             <div className="card-content">
               <div className="vision-statement">
                 To create a world where finding a parking spot is 
-                <span className="highlight-text"> no longer a concern</span>.
+                <span className="highlight-text"> no longer a concern</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Mini-metrics row */}
-        <div className={`mini-metrics ${isVisible ? 'fade-in-delayed' : ''}`}>
-          <div className="metric-item">
-            <div className="metric-number">↓</div>
-            <div className="metric-label">Search Time</div>
-          </div>
-          <div className="metric-item">
-            <div className="metric-number">↑</div>
-            <div className="metric-label">Customer Retention</div>
-          </div>
-          <div className="metric-item">
-            <div className="metric-number">↑</div>
-            <div className="metric-label">Utilization</div>
-          </div>
-        </div>
       </div>
     </section>
   );

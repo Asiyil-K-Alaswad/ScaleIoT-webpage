@@ -94,7 +94,7 @@ p {
 
 .btn-primary {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--bg-primary);
     box-shadow: var(--shadow-md);
 }
 
@@ -105,7 +105,7 @@ p {
 }
 
 .btn-secondary {
-    background: #0f0f0f;
+    background: var(--bg-secondary);
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
@@ -174,7 +174,7 @@ p {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--text-primary);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -272,7 +272,7 @@ p {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .highlight {
@@ -288,7 +288,7 @@ p {
 
 .hero-description {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -318,7 +318,7 @@ p {
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: var(--text-secondary);
 }
 
 
@@ -1556,29 +1556,29 @@ p {
 }
 
 .cta-section .btn-primary {
-    background: var(--white);
+    background: var(--bg-primary);
     color: var(--primary-color);
 }
 
 .cta-section .btn-primary:hover {
-    background: var(--gray-200);
+    background: var(--bg-tertiary);
 }
 
 .cta-section .btn-secondary {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
+    color: var(--bg-primary);
+    border-color: var(--bg-primary);
 }
 
 .cta-section .btn-secondary:hover {
-    background: var(--white);
+    background: var(--bg-primary);
     color: var(--primary-color);
 }
 
 /* Footer */
 .footer {
-    background: var(--gray-50);
-    color: var(--white);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     padding: 60px 0 20px;
     position: relative;
     z-index: 1;
@@ -1610,7 +1610,7 @@ p {
 }
 
 .footer-section h3 {
-    color: var(--text-dark);
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
@@ -1623,7 +1623,7 @@ p {
 }
 
 .footer-section ul li a {
-    color: var(--gray-300);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1638,11 +1638,11 @@ p {
 }
 
 .footer-section ul li .email-text {
-    color: var(--gray-300);
+    color: var(--text-secondary);
 }
 
 .footer-section ul li a {
-    color: var(--gray-300);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1654,7 +1654,7 @@ p {
 .footer-link-btn {
     background: none;
     border: none;
-    color: var(--gray-300);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
     cursor: pointer;
@@ -1669,7 +1669,7 @@ p {
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--gray-300);
+    border-top: 1px solid var(--border-color);
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -1684,7 +1684,7 @@ p {
 }
 
 .social-links a {
-    color: var(--gray-300);
+    color: var(--text-secondary);
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
@@ -1711,7 +1711,7 @@ p {
 }
 
 .modal-content {
-    background-color: var(--gray-200);
+    background-color: var(--bg-secondary);
     margin: 5% auto;
     padding: 2rem;
     border-radius: 16px;
