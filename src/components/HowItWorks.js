@@ -22,10 +22,10 @@ const HowItWorks = () => {
           // Section is entering or in view
           if (sectionTop <= 0) {
             // Section is fully in view or scrolled past
-            progress = Math.min(1, Math.abs(sectionTop) / (sectionHeight - windowHeight));
+            progress = Math.min(1, Math.abs(sectionTop/0.6) / (sectionHeight - windowHeight));
           } else {
             // Section is entering view - start progress
-            progress = Math.max(0, (windowHeight - sectionTop) / windowHeight);
+            progress = Math.max(0, (windowHeight - sectionTop/0.6) / windowHeight);
           }
         }
         

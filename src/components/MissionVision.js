@@ -51,12 +51,7 @@ const MissionVision = () => {
             </div>
             <div className="card-content">
               <p className="mission-text">
-                ScaleIoT's mission is to remove parking friction for people and unlock performance for places. 
-                We digitize the end-to-end journey—automatic entry via license-plate recognition, 
-                congestion-aware guidance to the most suitable spot, and seamless, cashless exit—so drivers 
-                spend less time parking and more time at their destination, while organizations increase 
-                footfall, tenant satisfaction, parking utilization, and operational efficiency. We build for 
-                usability, privacy, and peak-hour resilience, and we reward loyalty to retain satisfied users.
+              ScaleIoT removes parking friction and boosts site performance. We digitize the journey—license-plate entry, congestion-aware guidance, and cashless exit—so drivers save time and organizations gain footfall, satisfaction, utilization, and efficiency. Built for usability, privacy, peak resilience, and loyalty.
               </p>
               
             </div>
