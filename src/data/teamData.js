@@ -7,7 +7,7 @@ export const teamMembers = [
     name: "Waqas Behzad",
     role: "Business Strategy specialist ",
     linkedinUrl: "https://www.linkedin.com/in/waqas-behzad-83b927216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
-    photoUrl: "./ScaleIoT-webpage/Picture1.png", // Repository-specific path
+    photoUrl: "./ScaleIoT-webpage/Picture1.png", // Will be mapped to imported image
     showPhoto: true, // Set to false if no photo should be displayed
     expertiseTags: ["Business Strategy", "Tech", "Management"],
   },
@@ -16,7 +16,7 @@ export const teamMembers = [
     name: "Asiyil Khalid",
     role: "Systems Engineer",
     linkedinUrl: "https://www.linkedin.com/in/asiyil-alaswad-811842348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Replace with actual LinkedIn URL
-    photoUrl: "./ScaleIoT-webpage/Picture2.png", // Repository-specific path
+    photoUrl: "./ScaleIoT-webpage/Picture2.png", // Will be mapped to imported image
     showPhoto: true, // Important: set to false for members without photos
     expertiseTags: ["IoT Systems", "App Development", "Network Architecture"],
   }
@@ -28,13 +28,13 @@ export const associations = [
   {
     name: "UHUB",
     siteUrl: "https://uhub.ae", // Replace with actual website URL
-    logoSvg: "./ScaleIoT-webpage/uhub.webp", // Repository-specific path
+    logoSvg: "./ScaleIoT-webpage/uhub.webp", // Will be mapped to imported image
     alt: "UHUB Innovation Hub logo" // Accessible alt text
   },
   {
     name: "UDST",
     siteUrl: "https://udst.edu.qa", // Replace with actual website URL
-    logoSvg: "./ScaleIoT-webpage/uni.png", // Repository-specific path
+    logoSvg: "./ScaleIoT-webpage/uni.png", // Will be mapped to imported image
     alt: "University of Doha for Science and Technology logo" // Accessible alt text
   }
   // Add more associations as needed

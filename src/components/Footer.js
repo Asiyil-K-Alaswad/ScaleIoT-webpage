@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 const Footer = ({ openBetaForm, openContactForm }) => {
   const scrollToSection = (sectionId) => {
@@ -18,7 +19,7 @@ const Footer = ({ openBetaForm, openContactForm }) => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="./ScaleIoT-webpage/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
+              <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
               <span>ScaleIoT</span>
             </div>
             <p>Innovating Smart Cities with IoT-powered parking solutions that make urban mobility seamless and efficient.</p>

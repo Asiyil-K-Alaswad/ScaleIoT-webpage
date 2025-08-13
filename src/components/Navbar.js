@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import logo from './assets/logo.png';
+
 
 const Navbar = ({ openBetaForm, openContactForm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +39,7 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <img src="./ScaleIoT-webpage/logo.png" alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
+          <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
           <span>ScaleIoT-test</span>
         </div>
         

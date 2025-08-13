@@ -48,14 +48,14 @@ Add team member photos directly to the `/public/` directory:
 - **Recommended size**: 600x600px minimum
 - **Format**: JPG, PNG, or WebP
 - **Naming**: Use consistent naming (e.g., `Picture1.png`, `Picture2.png`)
-- **Path format**: Use repository-specific paths (e.g., `./ScaleIoT-webpage/Picture1.png`)
+- **Path format**: Images are imported and mapped automatically in the component
 
 ### 3. Add Association Logos
 Add association logos directly to the `/public/` directory:
 - **UHUB logo** (WebP/PNG format)
 - **UDST logo** (PNG format)
 - **File naming**: `uhub.webp`, `uni.png`
-- **Path format**: Use repository-specific paths (e.g., `./ScaleIoT-webpage/uhub.webp`)
+- **Path format**: Images are imported and mapped automatically in the component
 
 ### 4. Verify LinkedIn URLs
 - Test all LinkedIn profile links

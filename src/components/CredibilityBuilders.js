@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { teamMembers, associations, contentConfig } from '../data/teamData';
+import Picture1 from '../assets/Picture1.png';
+import Picture2 from '../assets/Picture2.png';
+import uhubLogo from '../assets/uhub.webp';
+import uniLogo from '../assets/uni.png';
 
 const CredibilityBuilders = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,6 +36,14 @@ const CredibilityBuilders = () => {
 
   const getInitials = (name) => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
+  };
+
+  // Image mapping for imported assets
+  const imageMap = {
+    './ScaleIoT-webpage/Picture1.png': Picture1,
+    './ScaleIoT-webpage/Picture2.png': Picture2,
+    './ScaleIoT-webpage/uhub.webp': uhubLogo,
+    './ScaleIoT-webpage/uni.png': uniLogo,
   };
 
   return (
@@ -72,7 +84,7 @@ const CredibilityBuilders = () => {
               <div className="profile-photo-container">
                 {member.showPhoto && member.photoUrl ? (
                   <img 
-                    src={member.photoUrl} 
+                    src={imageMap[member.photoUrl] || member.photoUrl} 
                     alt={`Portrait of ${member.name}`}
                     className="profile-photo"
                     loading="lazy"
@@ -169,7 +181,7 @@ const CredibilityBuilders = () => {
                 aria-label={`Visit ${association.name} website`}
               >
                 <img 
-                  src={association.logoSvg}
+                  src={imageMap[association.logoSvg] || association.logoSvg}
                   alt={association.alt}
                   className="association-logo"
                   loading="lazy"
