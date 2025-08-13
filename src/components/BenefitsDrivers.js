@@ -131,9 +131,6 @@ const BenefitsDrivers = () => {
                   <div className={`driver-benefit-icon-bg ${benefit.bgColor} ${benefit.borderColor}`}>
                     <benefit.icon className={`driver-benefit-icon ${benefit.color}`} />
                   </div>
-                  <div className={`driver-benefit-stat ${benefit.color} ${benefit.bgColor} ${benefit.borderColor}`}>
-                    {benefit.stat}
-                  </div>
                 </div>
                 
                 <h3>{benefit.title}</h3>

@@ -44,7 +44,7 @@ const Features = () => {
   const features = [
     {
       icon: Camera,
-      title: "ANPR Technology",
+      title: "LPR Technology",
       description: "Advanced camera sensors detect and recognize license plates instantly",
       benefit: "Faster entry, no lost tickets",
       gradient: "from-blue-500 to-blue-600",
@@ -149,41 +149,7 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible.features ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.7 }}
-          className="stats-section"
-        >
-          <div className="stats-header">
-            <h3>Performance You Can Trust</h3>
-            <p>Industry-leading reliability and speed</p>
-          </div>
-          
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="stat-item"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible.features ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="stat-icon-bg">
-                  <stat.icon className="stat-icon" />
-                </div>
-                <div className="stat-value">
-                  {stat.value}
-                </div>
-                <div className="stat-label">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

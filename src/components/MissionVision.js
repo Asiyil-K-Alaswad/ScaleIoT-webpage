@@ -1,0 +1,115 @@
+import React, { useEffect, useRef, useState } from 'react';
+
+const MissionVision = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section 
+      className="mission-vision-section" 
+      id="mission-vision"
+      ref={sectionRef}
+      aria-labelledby="mv-heading"
+    >
+      <div className="container">
+        {/* Section Divider */}
+        <div className="section-divider"></div>
+        
+        {/* Eyebrow */}
+        <div className={`eyebrow ${isVisible ? 'fade-in' : ''}`}>
+          About ScaleIoT
+        </div>
+
+        {/* Main Heading */}
+        <h1 id="mv-heading" className={`section-heading ${isVisible ? 'fade-in' : ''}`}>
+          Our Mission & Vision
+        </h1>
+
+        {/* Mission & Vision Cards Container */}
+        <div className="mv-cards-container">
+          {/* Mission Card */}
+          <div className={`mv-card mission-card ${isVisible ? 'slide-in-left' : ''}`}>
+            <div className="card-header">
+              <h2 id="mission-heading">Mission</h2>
+            </div>
+            <div className="card-content">
+              <p className="mission-text">
+                ScaleIoT's mission is to remove parking friction for people and unlock performance for places. 
+                We digitize the end-to-end journey—automatic entry via license-plate recognition, 
+                congestion-aware guidance to the most suitable spot, and seamless, cashless exit—so drivers 
+                spend less time parking and more time at their destination, while organizations increase 
+                footfall, tenant satisfaction, parking utilization, and operational efficiency. We build for 
+                usability, privacy, and peak-hour resilience, and we reward loyalty to retain satisfied users.
+              </p>
+              
+              {/* Outcome Pillars */}
+              <div className="outcome-pillars">
+                <div className="pillar-chip">
+                  <span>Time Well Spent</span>
+                </div>
+                <div className="pillar-chip">
+                  <span>Smarter Operations</span>
+                </div>
+                <div className="pillar-chip">
+                  <span>Happier Tenants & Shoppers</span>
+                </div>
+                <div className="pillar-chip">
+                  <span>Trust by Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Vision Card */}
+          <div className={`mv-card vision-card ${isVisible ? 'slide-in-right' : ''}`}>
+            <div className="card-header">
+              <h2 id="vision-heading">Vision</h2>
+            </div>
+            <div className="card-content">
+              <div className="vision-statement">
+                To create a world where finding a parking spot is 
+                <span className="highlight-text"> no longer a concern</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mini-metrics row */}
+        <div className={`mini-metrics ${isVisible ? 'fade-in-delayed' : ''}`}>
+          <div className="metric-item">
+            <div className="metric-number">↓</div>
+            <div className="metric-label">Search Time</div>
+          </div>
+          <div className="metric-item">
+            <div className="metric-number">↑</div>
+            <div className="metric-label">Customer Retention</div>
+          </div>
+          <div className="metric-item">
+            <div className="metric-number">↑</div>
+            <div className="metric-label">Utilization</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MissionVision;

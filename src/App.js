@@ -6,6 +6,8 @@ import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import BenefitsDrivers from './components/BenefitsDrivers';
 import BenefitsOrganizations from './components/BenefitsOrganizations';
+import MissionVision from './components/MissionVision';
+import CredibilityBuilders from './components/CredibilityBuilders';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import BetaModal from './components/BetaModal';
@@ -114,6 +116,10 @@ function App() {
       <Features />
       <BenefitsDrivers />
       <BenefitsOrganizations />
+      
+      <MissionVision />
+      
+      <CredibilityBuilders />
       
       <CTASection 
         openBetaForm={openBetaForm}

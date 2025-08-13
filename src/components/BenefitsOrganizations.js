@@ -71,7 +71,7 @@ const BenefitsOrganizations = () => {
       title: "Reduce Operating Costs",
       description: "Automation cuts staffing needs and eliminates ticket-related expenses and maintenance.",
       metric: "-60% costs",
-      impact: "Significant OPEX savings",
+      impact: "Significant savings",
       gradient: "from-purple-500 to-purple-600",
       bgGradient: "from-purple-50 to-purple-100"
     },
@@ -135,9 +135,6 @@ const BenefitsOrganizations = () => {
                   <div className="benefit-header">
                     <div className={`benefit-icon-bg ${benefit.bgGradient}`}>
                       <benefit.icon className="benefit-icon" />
-                    </div>
-                    <div className="benefit-metric">
-                      {benefit.metric}
                     </div>
                   </div>
                   
