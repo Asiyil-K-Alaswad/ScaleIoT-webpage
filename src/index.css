@@ -2497,8 +2497,8 @@ textarea:focus {
 }
 
 .team-card {
-    background: rgba(45, 45, 45, 0.6);
-    border: 1px solid rgba(188, 195, 207, 0.15);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 32px;
     text-align: center;
@@ -2603,13 +2603,13 @@ textarea:focus {
 .member-name {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .member-role {
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--text-secondary);
     margin-bottom: 16px;
 }
 
@@ -2646,7 +2646,7 @@ textarea:focus {
 .bio-text {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--text-light);
+    color: var(--text-secondary);
     margin-bottom: 12px;
     transition: all 0.3s ease;
 }
@@ -2722,12 +2722,12 @@ textarea:focus {
 .associations-section {
     text-align: center;
     padding-top: 60px;
-    border-top: 1px solid rgba(188, 195, 207, 0.2);
+    border-top: 1px solid var(--border-color);
 }
 
 .associations-heading {
     font-size: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-primary);
     margin-bottom: 32px;
 }
 
@@ -2761,7 +2761,7 @@ textarea:focus {
 
 .associations-disclaimer {
     font-size: 0.8rem;
-    color: var(--text-light);
+    color: var(--text-secondary);
     opacity: 0.7;
     max-width: 600px;
     margin: 0 auto;
