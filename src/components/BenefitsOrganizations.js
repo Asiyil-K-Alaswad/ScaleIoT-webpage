@@ -15,7 +15,6 @@ const BenefitsOrganizations = () => {
   const [isVisible, setIsVisible] = React.useState({ 'business-benefits': false });
 
   useEffect(() => {
-    const currentRef = benefitsRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,13 +26,13 @@ const BenefitsOrganizations = () => {
       { threshold: 0.1 }
     );
 
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (benefitsRef.current) {
+      observer.observe(benefitsRef.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
+      if (benefitsRef.current) {
+        observer.unobserve(benefitsRef.current);
       }
     };
   }, []);

@@ -18,7 +18,6 @@ const Features = () => {
   const [isVisible, setIsVisible] = React.useState({ features: false });
 
   useEffect(() => {
-    const currentRef = featuresRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,13 +29,13 @@ const Features = () => {
       { threshold: 0.1 }
     );
 
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
+      if (featuresRef.current) {
+        observer.unobserve(featuresRef.current);
       }
     };
   }, []);
