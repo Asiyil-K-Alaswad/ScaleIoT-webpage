@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
 import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
 import BenefitsDrivers from './components/BenefitsDrivers';
-import BenefitsOrganizations from './components/BenefitsOrganizations';
 import MissionVision from './components/MissionVision';
 import CredibilityBuilders from './components/CredibilityBuilders';
 import CTASection from './components/CTASection';
@@ -15,7 +14,7 @@ import BetaModal from './components/BetaModal';
 import ContactModal from './components/ContactModal';
 import SuccessMessage from './components/SuccessMessage';
 import NeonVectorBackground from './components/NeonVectorBackground';
-
+import BenefitsPage from './components/BenefitsPage';
 
 function App() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
@@ -97,60 +96,66 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="App" style={{ position: 'relative', zIndex: 1 }}>
-      <NeonVectorBackground 
-        scrollProgress={scrollProgress}
-        isVisible={true}
-        concurrentPaths={6}
-      />
-      <Navbar 
-        openBetaForm={openBetaForm}
-        openContactForm={openContactForm}
-      />
-      
-      <Hero 
-        openBetaForm={openBetaForm}
-        openContactForm={openContactForm}
-      />
-      
-      <ProblemSolution />
-      <HowItWorks />
-      <MissionVision />
-      <Features />
-      <BenefitsDrivers />
-      <BenefitsOrganizations />
-      
-      
-      <CredibilityBuilders />
-      
-      <CTASection 
-        openBetaForm={openBetaForm}
-        openContactForm={openContactForm}
-      />
-      
-      <Footer 
-        openBetaForm={openBetaForm}
-        openContactForm={openContactForm}
-      />
+      <Router>
+        <div className="App" style={{ position: 'relative', zIndex: 1 }}>
+          <NeonVectorBackground 
+            scrollProgress={scrollProgress}
+            isVisible={true}
+            concurrentPaths={6}
+          />
+          <Navbar 
+            openBetaForm={openBetaForm}
+            openContactForm={openContactForm}
+          />
+          
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero 
+                  openBetaForm={openBetaForm}
+                  openContactForm={openContactForm}
+                />
+                
+                <ProblemSolution />
+                <HowItWorks />
+                <MissionVision />
+                <BenefitsDrivers />
+                
+                <CredibilityBuilders />
+                
+                <CTASection 
+                  openBetaForm={openBetaForm}
+                  openContactForm={openContactForm}
+                />
+                
+                <Footer 
+                  openBetaForm={openBetaForm}
+                  openContactForm={openContactForm}
+                />
+              </>
+            } />
+            <Route path="/benefits" element={<BenefitsPage />} />
+          </Routes>
 
-      <BetaModal 
-        isOpen={isBetaModalOpen}
-        onClose={closeBetaForm}
-        onSuccess={showSuccessMessage}
-      />
+          <BetaModal 
+            isOpen={isBetaModalOpen}
+            onClose={closeBetaForm}
+            onSuccess={showSuccessMessage}
+          />
 
-      <ContactModal 
-        isOpen={isContactModalOpen}
-        onClose={closeContactForm}
-        onSuccess={showSuccessMessage}
-      />
+          <ContactModal 
+            isOpen={isContactModalOpen}
+            onClose={closeContactForm}
+            onSuccess={showSuccessMessage}
+          />
 
-      <SuccessMessage 
-        isOpen={isSuccessMessageOpen}
-        onClose={closeSuccessMessage}
-        text={successText}
-      />
-          </div>
+          <SuccessMessage 
+            isOpen={isSuccessMessageOpen}
+            onClose={closeSuccessMessage}
+            text={successText}
+          />
+        </div>
+      </Router>
     </ThemeProvider>
   );
 }

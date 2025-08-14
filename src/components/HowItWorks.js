@@ -143,14 +143,19 @@ const HowItWorks = () => {
                 </div>
                 
                 <div className={`step-content ${illumination.isIlluminated ? 'illuminated' : ''}`}>
-                  <div className={`step-number ${illumination.isIlluminated ? 'illuminated' : ''}`}>
-                    {step.number}
+                  <div className="step-rectangle">
+                    <div className={`step-number ${illumination.isIlluminated ? 'illuminated' : ''}`}>
+                      {step.number}
+                    </div>
+                    <div className={`step-icon ${illumination.isIlluminated ? 'illuminated' : ''}`}>
+                      <i className={step.icon}></i>
+                    </div>
+                    <h3>{step.title}</h3>
                   </div>
-                  <div className={`step-icon ${illumination.isIlluminated ? 'illuminated' : ''}`}>
-                    <i className={step.icon}></i>
+                  <div className="step-description-container">
+                    <p className="step-description">{step.description}</p>
+                    <div className="step-description-gradient"></div>
                   </div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
                 </div>
               </div>
             );

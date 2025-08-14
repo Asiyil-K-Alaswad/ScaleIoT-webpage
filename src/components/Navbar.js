@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import ThemeToggle from './ThemeToggle';
-
 
 const Navbar = ({ openBetaForm, openContactForm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,43 +37,53 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
     closeMenu();
   };
 
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
-          <span>ScaleIoT-test</span>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+            <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
+            <span>ScaleIoT-test</span>
+          </Link>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <a 
-            href="#how-it-works" 
+          {isHomePage && (
+            <a 
+              href="#how-it-works" 
+              className="nav-link"
+              onClick={() => scrollToSection('how-it-works')}
+            >
+              How It Works
+            </a>
+          )}
+          {isHomePage && (
+            <a 
+              href="#features" 
+              className="nav-link"
+              onClick={() => scrollToSection('features')}
+            >
+              Features
+            </a>
+          )}
+          <Link 
+            to="/benefits" 
             className="nav-link"
-            onClick={() => scrollToSection('how-it-works')}
-          >
-            How It Works
-          </a>
-          <a 
-            href="#features" 
-            className="nav-link"
-            onClick={() => scrollToSection('features')}
-          >
-            Features
-          </a>
-          <a 
-            href="#benefits" 
-            className="nav-link"
-            onClick={() => scrollToSection('benefits')}
+            onClick={closeMenu}
           >
             Benefits
-          </a>
-          <a 
-            href="#contact" 
-            className="nav-link"
-            onClick={() => scrollToSection('contact')}
-          >
-            Contact
-          </a>
+          </Link>
+          {isHomePage && (
+            <a 
+              href="#contact" 
+              className="nav-link"
+              onClick={() => scrollToSection('contact')}
+            >
+              Contact
+            </a>
+          )}
           <ThemeToggle />
           <button className="btn btn-primary nav-cta" onClick={openBetaForm}>
             Join Beta

@@ -640,20 +640,20 @@ p {
 }
 
 .step-content {
-    background: var(--gray-200);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-md);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
     transition: all 0.5s ease;
     width: 100%;
-    border: 2px solid transparent;
+    border: none;
 }
 
 .step-content.illuminated {
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(254, 102, 46, 0.2);
-    transform: scale(1.02);
-    background: var(--gray-200);
+    border: none;
+    box-shadow: none;
+    transform: none;
+    background: transparent;
 }
 
 .timeline-step:hover .step-content {
@@ -716,16 +716,68 @@ p {
     font-weight: 600;
 }
 
-.step-content p {
+/* Step description styles moved to .step-description class above */
+
+/* Step description with gradient fade and hover expansion */
+.step-description-container {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+.step-description {
     font-size: 0.9rem;
     line-height: 1.5;
     color: #9CA3AF;
     transition: all 0.5s ease;
+    margin: 0;
+    max-height: 3.6em; /* Show approximately 2 lines */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: center;
 }
 
-.step-content.illuminated p {
+.step-description-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3em;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 8px 8px;
+}
+
+.step-content.illuminated .step-description {
     color: var(--text-dark);
     font-weight: 500;
+}
+
+/* Hover effects for description expansion - only affects description */
+.step-content:hover .step-description {
+    max-height: 10em; /* Expand to show full content */
+}
+
+.step-content:hover .step-description-gradient {
+    opacity: 0; /* Hide gradient on hover */
+}
+
+/* Hover effects for the rectangle - subtle animations */
+.step-content:hover .step-rectangle {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(254, 102, 46, 0.1);
+}
+
+.step-content:hover .step-number {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.step-content:hover .step-icon {
+    transform: scale(1.1);
 }
 
 /* Responsive Timeline */
@@ -753,8 +805,13 @@ p {
         display: none;
     }
     
-    .step-content {
+    .step-rectangle {
         padding: 1rem;
+    }
+    
+    .step-description-container {
+        max-width: 100%;
+        margin-top: 0.75rem;
     }
 }
 
@@ -767,12 +824,24 @@ p {
         margin-top: 2rem;
     }
     
-    .step-content h3 {
+    .step-rectangle h3 {
         font-size: 1rem;
     }
     
-    .step-content p {
+    .step-description {
         font-size: 0.85rem;
+        max-height: 4.5em; /* Show more text on mobile by default */
+    }
+    
+    /* Mobile-friendly description expansion */
+    .step-content:active .step-description,
+    .step-content:focus .step-description {
+        max-height: 15em;
+    }
+    
+    .step-content:active .step-description-gradient,
+    .step-content:focus .step-description-gradient {
+        opacity: 0;
     }
 }
 
@@ -2941,4 +3010,146 @@ textarea:focus {
         width: 18px;
         height: 18px;
     }
+}
+
+/* Benefits Page Styles */
+.benefits-page {
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    background: var(--bg-primary);
+}
+
+.benefits-page .page-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.benefits-page .page-header h1 {
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), #FF8A65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.benefits-page .page-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.back-button-container {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 20px;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.back-button:hover {
+    background: var(--border-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive Design for Benefits Page */
+@media (max-width: 768px) {
+    .benefits-page {
+        padding: 100px 0 60px;
+    }
+    
+    .benefits-page .page-header {
+        margin-bottom: 60px;
+    }
+    
+    .benefits-page .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .benefits-page .page-header p {
+        font-size: 1.125rem;
+        padding: 0 20px;
+    }
+    
+    .back-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-page .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .benefits-page .page-header p {
+        font-size: 1rem;
+    }
+    
+    .back-button {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works {
+        padding: 60px 0;
+    }
+    
+    .timeline-container {
+        margin-top: 2rem;
+    }
+    
+    .step-content h3 {
+        font-size: 1rem;
+    }
+    
+    .step-description {
+        font-size: 0.85rem;
+        max-height: 4.5em; /* Show more text on mobile by default */
+    }
+    
+    /* Mobile-friendly description expansion */
+    .step-content:active .step-description,
+    .step-content:focus .step-description {
+        max-height: 15em;
+    }
+    
+    .step-content:active .step-description-gradient,
+    .step-content:focus .step-description-gradient {
+        opacity: 0;
+    }
+}
+
+/* Step rectangle container for icon, number, and title */
+.step-rectangle {
+    background: var(--gray-200);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 0.5rem;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.step-content.illuminated .step-rectangle {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(254, 102, 46, 0.2);
+    background: var(--gray-200);
 }
