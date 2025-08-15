@@ -41,7 +41,7 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
       <div className="nav-container">
         <div className="nav-logo">
           <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
-          <span>ScaleIoT-test</span>
+          <span>ScaleIoT</span>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
