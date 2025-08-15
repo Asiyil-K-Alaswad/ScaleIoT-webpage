@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { sendOrganizationContactEmail, sendFallbackEmail } from '../services/emailService';
 
 const ContactModal = ({ isOpen, onClose, onSuccess }) => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const ContactModal = ({ isOpen, onClose, onSuccess }) => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,15 +19,18 @@ const ContactModal = ({ isOpen, onClose, onSuccess }) => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (emailError) setEmailError('');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setEmailError('');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Try to send email using EmailJS
+      await sendOrganizationContactEmail(formData);
       
       // Show success message
       onSuccess('Thank you for your interest! Our team will contact you within 24 hours.');
@@ -44,8 +49,16 @@ const ContactModal = ({ isOpen, onClose, onSuccess }) => {
       onClose();
       
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again.');
+      console.error('Error sending email:', error);
+      setEmailError('Failed to send email automatically. Opening email client instead...');
+      
+      // Fallback to mailto link
+      setTimeout(() => {
+        sendFallbackEmail(formData, 'organization');
+        onSuccess('Contact form opened in your email client. Please send the email to complete your inquiry.');
+        onClose();
+      }, 2000);
+      
     } finally {
       setIsSubmitting(false);
     }
@@ -132,6 +145,13 @@ const ContactModal = ({ isOpen, onClose, onSuccess }) => {
               onChange={handleChange}
             ></textarea>
           </div>
+
+          {emailError && (
+            <div className="form-error">
+              <p>{emailError}</p>
+            </div>
+          )}
+
           <button 
             type="submit" 
             className="btn btn-primary btn-full"

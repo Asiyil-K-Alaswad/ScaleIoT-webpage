@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Asiyil-K-Alaswad.github.io/ScaleIoT-webpage",
+  "homepage": "",
   "name": "scaleiot-landing-page",
   "version": "1.0.0",
   "description": "ScaleIoT - Smart Parking Solutions Landing Page",
@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.12",
     "konva": "^9.2.3",
     "lucide-react": "^0.539.0",

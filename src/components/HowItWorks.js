@@ -154,7 +154,7 @@ const HowItWorks = () => {
                   </div>
                   <div className="step-description-container">
                     <p className="step-description">{step.description}</p>
-                    <div className="step-description-gradient"></div>
+                    {/* <div className="step-description-gradient"></div> */}
                   </div>
                 </div>
               </div>

@@ -45,28 +45,18 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
         <div className="nav-logo">
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
             <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
-            <span>ScaleIoT-test</span>
+            <span>ScaleIoT</span>
           </Link>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           {isHomePage && (
-            <a 
-              href="#how-it-works" 
+            <button 
               className="nav-link"
               onClick={() => scrollToSection('how-it-works')}
             >
               How It Works
-            </a>
-          )}
-          {isHomePage && (
-            <a 
-              href="#features" 
-              className="nav-link"
-              onClick={() => scrollToSection('features')}
-            >
-              Features
-            </a>
+            </button>
           )}
           <Link 
             to="/benefits" 
@@ -76,13 +66,12 @@ const Navbar = ({ openBetaForm, openContactForm }) => {
             Benefits
           </Link>
           {isHomePage && (
-            <a 
-              href="#contact" 
+            <button 
               className="nav-link"
               onClick={() => scrollToSection('contact')}
             >
               Contact
-            </a>
+            </button>
           )}
           <ThemeToggle />
           <button className="btn btn-primary nav-cta" onClick={openBetaForm}>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { sendBetaSignupEmail, sendFallbackEmail } from '../services/emailService';
 
 const BetaModal = ({ isOpen, onClose, onSuccess }) => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const BetaModal = ({ isOpen, onClose, onSuccess }) => {
     vehicle: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,15 +17,18 @@ const BetaModal = ({ isOpen, onClose, onSuccess }) => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (emailError) setEmailError('');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setEmailError('');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Try to send email using EmailJS
+      await sendBetaSignupEmail(formData);
       
       // Show success message
       onSuccess('Welcome to the ScaleIoT beta! We\'ll notify you when we\'re ready to launch.');
@@ -40,8 +45,16 @@ const BetaModal = ({ isOpen, onClose, onSuccess }) => {
       onClose();
       
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again.');
+      console.error('Error sending email:', error);
+      setEmailError('Failed to send email automatically. Opening email client instead...');
+      
+      // Fallback to mailto link
+      setTimeout(() => {
+        sendFallbackEmail(formData, 'beta');
+        onSuccess('Beta signup form opened in your email client. Please send the email to complete your registration.');
+        onClose();
+      }, 2000);
+      
     } finally {
       setIsSubmitting(false);
     }
@@ -88,6 +101,12 @@ const BetaModal = ({ isOpen, onClose, onSuccess }) => {
               onChange={handleChange}
             />
           </div>
+
+          {emailError && (
+            <div className="form-error">
+              <p>{emailError}</p>
+            </div>
+          )}
 
           <button 
             type="submit" 

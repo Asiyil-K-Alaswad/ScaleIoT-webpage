@@ -39,6 +39,8 @@ export const ThemeProvider = ({ children }) => {
       root.style.setProperty('--border-color', '#404040');
       root.style.setProperty('--card-bg', 'rgba(45, 45, 45, 0.6)');
       root.style.setProperty('--shadow-color', 'rgba(0, 0, 0, 0.4)');
+      root.style.setProperty('--gradient-start', 'rgba(15, 15, 15, 0.8)');
+      root.style.setProperty('--gradient-end', 'rgba(15, 15, 15, 1)');
     } else {
       root.style.setProperty('--bg-primary', '#FFFFFF');
       root.style.setProperty('--bg-secondary', '#F8F9FA');
@@ -48,6 +50,8 @@ export const ThemeProvider = ({ children }) => {
       root.style.setProperty('--border-color', '#DEE2E6');
       root.style.setProperty('--card-bg', 'rgba(255, 255, 255, 0.9)');
       root.style.setProperty('--shadow-color', 'rgba(0, 0, 0, 0.1)');
+      root.style.setProperty('--gradient-start', 'rgba(255, 255, 255, 0.8)');
+      root.style.setProperty('--gradient-end', 'rgba(255, 255, 255, 1)');
     }
   }, [isDarkMode]);
 

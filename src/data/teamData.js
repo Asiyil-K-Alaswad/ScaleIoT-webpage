@@ -27,7 +27,7 @@ export const teamMembers = [
 export const associations = [
   {
     name: "UHUB",
-    siteUrl: "https://uhub.ae", // Replace with actual website URL
+    siteUrl: "https://www.udst.edu.qa/uhub", // Replace with actual website URL
     logoSvg: "./ScaleIoT-webpage/uhub.webp", // Will be mapped to imported image
     alt: "UHUB Innovation Hub logo" // Accessible alt text
   },

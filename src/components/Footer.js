@@ -17,14 +17,14 @@ const Footer = ({ openBetaForm, openContactForm }) => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-section">
+          <div className="footer-section footer-main">
             <div className="footer-logo">
               <img src={logo} alt="ScaleIoT Logo" style={{ width: '32px', height: '32px' }} />
               <span>ScaleIoT</span>
             </div>
-            <p>Innovating Smart Cities with IoT-powered parking solutions that make urban mobility seamless and efficient.</p>
+            <p className="footer-description">Innovating Smart Cities with IoT-powered parking solutions that make urban mobility seamless and efficient.</p>
           </div>
-          <div className="footer-section">
+          <div className="footer-section footer-links">
             <h3>Quick Links</h3>
             <ul>
               <li><a href="#how-it-works" onClick={() => scrollToSection('how-it-works')}>How It Works</a></li>
@@ -33,14 +33,14 @@ const Footer = ({ openBetaForm, openContactForm }) => {
               <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
             </ul>
           </div>
-          <div className="footer-section">
+          <div className="footer-section footer-actions">
             <h3>Get Started</h3>
             <ul>
               <li><button className="footer-link-btn" onClick={openBetaForm}>Join Beta</button></li>
               <li><button className="footer-link-btn" onClick={openContactForm}>Request Demo</button></li>
             </ul>
           </div>
-          <div className="footer-section">
+          <div className="footer-section footer-contact">
             <h3>Contact Info</h3>
             <ul>
               <li><i className="fas fa-envelope"></i> <span className="email-text">contact@scaleiot.org</span></li>
