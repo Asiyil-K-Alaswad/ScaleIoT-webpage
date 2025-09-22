@@ -7,7 +7,7 @@ import uniLogo from '../assets/uni.png';
 
 const CredibilityBuilders = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [expandedBios, setExpandedBios] = useState({});
+  const [expandedBios] = useState({});
   const sectionRef = useRef(null);
 
   useEffect(() => {

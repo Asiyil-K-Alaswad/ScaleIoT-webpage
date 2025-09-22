@@ -7,10 +7,6 @@ import {
   CreditCard, 
   Heart,
   BarChart3,
-  Shield,
-  Zap,
-  Users,
-  MapPin
 } from 'lucide-react';
 
 const Features = () => {
