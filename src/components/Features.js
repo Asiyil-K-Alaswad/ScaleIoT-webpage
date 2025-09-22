@@ -92,12 +92,6 @@ const Features = () => {
     }
   ];
 
-  const stats = [
-    { value: "99.9%", label: "Recognition Accuracy", icon: Shield },
-    { value: "<2sec", label: "Gate Response Time", icon: Zap },
-    { value: "24/7", label: "System Availability", icon: Users },
-    { value: "150+", label: "Spots Managed", icon: MapPin }
-  ];
 
   return (
     <section id="features" className="features" ref={featuresRef}>

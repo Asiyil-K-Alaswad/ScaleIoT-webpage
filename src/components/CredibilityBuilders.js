@@ -27,12 +27,6 @@ const CredibilityBuilders = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toggleBio = (memberId) => {
-    setExpandedBios(prev => ({
-      ...prev,
-      [memberId]: !prev[memberId]
-    }));
-  };
 
   const getInitials = (name) => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
